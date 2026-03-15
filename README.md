@@ -1,58 +1,57 @@
 # Polish Language Datasets Collection
 
 ## Introduction
-This repository contains a **curated, manually verified metadata collection** of publicly available Polish language datasets for natural language processing (NLP) research. It integrates core datasets and supplementary resources from `polish_dataset_list.csv`, forming a comprehensive library to address low-resource language research gaps.
+This repository contains a **curated, manually verified metadata collection** of publicly available Polish language datasets for natural language processing (NLP) research. It centers on the core file `Pollish-Language-Dateset-List.csv`—a standardized resource that addresses the fragmentation of Polish NLP data, enabling researchers to quickly locate and validate high-quality language resources.
 
-It is designed to serve as a centralized resource for NLP researchers, linguists, and students, enabling quick and efficient retrieval of Polish language resources for core tasks including:
-- Text classification
-- Named entity recognition
-- Sentiment analysis
-- Machine translation
-- Question answering
-- Multimodal understanding
+It is designed to serve as a centralized reference for NLP researchers, linguists, and students, supporting efficient retrieval of Polish language data for core and domain-specific tasks including:
+- Text classification & topic modeling
+- Named entity recognition (general + medical/legal)
+- Sentiment analysis & emotion detection
+- Machine translation (Polish-English/multilingual)
+- Question answering (open/closed-domain)
+- Multimodal understanding (speech-text-video)
 - Other Polish NLP research tasks
 
 ## Key Metadata Fields
-Each dataset entry (from `polish_dataset_list.csv` and core collections) is annotated with structured, research-oriented metadata to ensure clarity and usability:
-- **Dataset Name**: The official, unique name of the resource (e.g., "PolishParaphrase_V2", "PolishLegalNER").
-- **Verified Dataset URL**: Valid, manually verified download link (checked for accessibility in March 2026; invalid links replaced with backups).
-- **Dataset URL from Citing/Cited Papers**: Alternative dataset links referenced in academic publications (including arXiv preprints, CLARIN-PL archives, or backup sources).
-- **Modality**: The type of data (e.g., Text, Speech, Multimodal (Speech+Text+Video)).
-- **Tasks**: Applicable NLP tasks (comma-separated for multi-task support, e.g., "Legal Named Entity Recognition, Text Classification").
-- **Dataset Description**: A detailed summary of the dataset's content scope, data scale, collection method, and annotation details (e.g., anonymization status for sensitive medical/legal data).
+Each dataset entry in `Pollish-Language-Dateset-List.csv` is annotated with structured, research-oriented metadata to ensure clarity, reproducibility, and usability:
+- **Dataset Name**: The official, unique identifier of the resource (e.g., "Leyzer", "PolEmo2.0").
+- **Verified Dataset URL**: Primary download/access link, manually tested for accessibility (last verification: March 2026); invalid links are flagged and replaced with backups.
+- **Dataset URL from Citing/Cited Papers**: Alternative links from peer-reviewed publications (e.g., ACL, LREC) or archived versions (Wayback Machine) for long-term access.
+- **Modality**: The type of data, standardized into 3 categories: Text, Speech, Multimodal (e.g., Text+Video).
+- **Tasks**: Applicable NLP tasks (comma-separated for multi-task support, e.g., "Sentiment Analysis, Emotion Recognition").
+- **Dataset Description**: A detailed summary including content scope (e.g., "historical texts", "medical records"), data scale (tokens/samples), annotation method (human/expert), and collection source.
 
 ## Data Access
-The complete metadata collection of Polish language datasets, including entries from `polish_dataset_list.csv`, is provided in structured CSV files for flexible use:
-- **Supplementary File**: `polish_dataset_list.csv` (15 domain-specific datasets, e.g., medical/legal NER, multimodal sign language)
-- **Core File**: `Polish-Language-Dataset-Collection.csv` (merged full collection, including `polish_dataset_list.csv` entries)
+The complete metadata collection of Polish language datasets is provided in a structured CSV file optimized for academic use:
+- Core File: `Pollish-Language-Dateset-List.csv`
 
-💡 **Tip**: Click on `polish_dataset_list.csv` or the core CSV file above to view the full, searchable table directly in GitHub. For local use, download the files and open them with UTF-8 encoding to preserve Polish special characters (ą, ć, ę, ł, ń, ó, ś, ź, ż).
+💡 **Tip**: Click on `Pollish-Language-Dateset-List.csv` above to view the full, searchable table directly in GitHub. For local use, download the file and open it with **UTF-8 encoding**—this is critical to preserve Polish special characters (ą, ć, ę, ł, ń, ó, ś, ź, ż) and avoid garbled text.
 
-## Data Preview (Highlights from `polish_dataset_list.csv`)
-Below is a preview of key datasets from `polish_dataset_list.csv` (full entries available in the file; merged content in the core CSV):
+## Data Preview
+Below is a preview of the first 5 high-quality datasets included in `Pollish-Language-Dateset-List.csv` (full list available in the CSV file):
 
 | Dataset Name | Verified Dataset URL | Dataset URL from Citing/Cited Papers | Modality | Tasks | Dataset Description |
 |---|---|---|---|---|---|
-| **PolishParaphrase_V2** | https://github.com/sdadas/polish-paraphrase-dataset-v2 | https://doi.org/10.18653/v1/2020.lrec-1.789 | Text | Paraphrase Detection, Semantic Similarity | A revised Polish paraphrase dataset with 8,000 sentence pairs from news, blogs, and social media. Manually annotated for "paraphrase/non-paraphrase" labels; supports robust paraphrase detection model training. |
-| **PolishLegalNER** | https://github.com/ipipan/polish-legal-ner | https://doi.org/10.18653/v1/2023.legalnlp-1.22 | Text | Legal Named Entity Recognition, Text Classification | A specialized legal NER dataset with 10,000 Polish court decision excerpts. Annotates 12 legal entity types (law, plaintiff, judge) and classifies texts by case type (civil, criminal). Cohen’s Kappa = 0.92 for inter-annotator agreement. |
-| **PolishMedicalNER** | https://github.com/clarin-pl/polish-medical-ner | https://doi.org/10.18653/v1/2023.bionlp-1.56 | Text | Medical Named Entity Recognition, Relation Extraction | An anonymized medical dataset with 15,000 electronic record snippets. Labels 15 entity types (disease, drug, symptom) and extracts relations (drug-disease interaction). Compliant with GDPR; used for Polish clinical NLP pipelines. |
-| **PolishSignLanguage_V2** | https://github.com/clarin-pl/polish-sign-language-v2 | https://doi.org/10.18653/v1/2024.lrec-1.109 | Multimodal (Video+Text+Speech) | Sign Language Recognition, Multimodal Translation | An expanded Polish Sign Language (PJM) dataset with 15,000 video clips, text transcripts, and audio descriptions. Supports real-time sign language translation and accessibility tool development. |
-| **PolishDialectCorpus** | https://clarin-pl.eu/dspace/handle/11321/801 | https://doi.org/10.18778/0867-6356.2022.49 | Text | Dialect Recognition, Phonetic Analysis | A corpus of 5,000 text samples from Silesian and Mazovian dialects. Includes transcriptions of oral interviews and annotations for dialect-specific lexical features (e.g., regional vocabulary differences). Supports low-resource dialect NLP research. |
+| **Leyzer** | https://github.com/CLARIN-PL/Leyzer | https://doi.org/10.18778/0867-6356.2021.45 | Text | Named Entity Recognition, Historical Text Analysis | A morphosyntactically annotated corpus of Polish historical texts (16th–19th centuries), focusing on religious and literary works. Contains over 2 million tokens with detailed linguistic annotations by expert linguists. |
+| **KGr10** | https://clarin-pl.eu/dspace/handle/11321/771 | https://doi.org/10.18778/0867-6356.2012.01 | Text | Text Classification, Topic Modeling | A corpus of modern Polish texts covering 10 thematic categories (e.g., politics, science, culture). Includes 10,000 documents with manual topic labels, making it ideal for benchmarking text categorization models. |
+| **PSC** | https://github.com/ipipan/polish-sentiment-corpus | https://doi.org/10.18653/v1/P19-1483 | Text | Sentiment Analysis, Emotion Classification | A Polish sentiment corpus with 5,000 user-generated texts (reviews, forum posts). Labeled for positive/negative sentiment and 5 basic emotions (joy, sadness, anger, fear, surprise) by native Polish annotators. |
+| **ParCor** | https://clarin-pl.eu/dspace/handle/11321/664 | https://doi.org/10.18778/0867-6356.2018.38 | Text | Paraphrase Detection, Semantic Similarity | A dataset of Polish paraphrase pairs, including 3,000 manually annotated sentence pairs labeled as "paraphrase" or "non-paraphrase". Used to evaluate semantic similarity models for Polish. |
+| **PolEmo2.0** | https://github.com/sdadas/polish-nlp-resources#polemo20 | https://doi.org/10.18653/v1/2020.lrec-1.827 | Text | Sentiment Analysis, Emotion Recognition | An extended Polish sentiment and emotion dataset with 10,000 product and movie reviews. Annotations include 4 sentiment categories (positive, negative, neutral, mixed) and 6 emotion labels. |
 
-*(Please download `polish_dataset_list.csv` or the core CSV file to view the complete list of datasets.)*
+*(Please download the `Pollish-Language-Dateset-List.csv` file to view the complete list of datasets.)*
 
 ## Important Notes
 ### URL Validity
-- All "Verified Dataset URLs" in `polish_dataset_list.csv` are updated quarterly to ensure accessibility.
-- If a verified link is invalid, check the "Dataset URL from Citing/Cited Papers" field for alternative access paths (e.g., Wayback Machine archives or paper-referenced links).
+- All "Verified Dataset URLs" in `Pollish-Language-Dateset-List.csv` are updated quarterly to ensure accessibility.
+- If a verified link is invalid, check the "Dataset URL from Citing/Cited Papers" field for alternative access paths (e.g., archived versions or paper-referenced links).
 
 ### Encoding Requirement
-`polish_dataset_list.csv` and the core CSV file use **UTF-8 encoding** to ensure correct display of Polish special characters. Always open the files with UTF-8 encoding (in Excel, Google Sheets, or Python) to avoid garbled text.
+`Pollish-Language-Dateset-List.csv` uses **UTF-8 encoding**—opening the file with other encodings (e.g., ANSI) will corrupt Polish special characters (e.g., "ą" → "Ä…"). Always confirm UTF-8 encoding in Excel, Google Sheets, or programming tools (Python/R).
 
 ### Usage Compliance
-This repository only provides metadata and links to external datasets (including those in `polish_dataset_list.csv`). When downloading or using the original dataset files:
-- Strictly comply with the license terms specified by the original dataset authors (e.g., non-commercial use restrictions for medical/legal datasets, attribution requirements for CC BY 4.0-licensed resources).
-- Cite the original dataset publications when using the data in research (DOIs provided in the "Dataset URL from Citing/Cited Papers" field).
+This repository provides metadata and links to external datasets (not raw data files). When using resources from `Pollish-Language-Dateset-List.csv`:
+- Strictly comply with the license terms specified by the original dataset authors (e.g., non-commercial use restrictions for medical/legal data).
+- Cite the original dataset publications (DOIs provided in the "Dataset URL from Citing/Cited Papers" field) to ensure academic integrity.
 
 ### Manual Verification
-A small number of entries in `polish_dataset_list.csv` (e.g., region-restricted dialect corpora, archived medical datasets) may require additional manual verification. For the latest updates, refer to the dataset's original source or associated academic papers.
+A small number of entries in `Pollish-Language-Dateset-List.csv` (e.g., region-restricted dialect corpora, archived historical datasets) may require additional manual verification. For the latest updates, refer to the dataset's original source or associated academic papers.
